@@ -8,6 +8,7 @@
  * - Note: we do destructuring (ln 17) last so the props passed in overwrites the defaults
  */
 import React from 'react';
+import { StyledButton } from './styles';
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   variant?: 'light' | 'dark' | 'danger';
@@ -18,9 +19,16 @@ export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ children, variant, size, isFullWidth, ...props }, ref) => {
     return (
-      <button ref={ref} type="button" {...props}>
+      <StyledButton
+        ref={ref}
+        variant={variant}
+        size={size}
+        isFullWidth={isFullWidth}
+        type="button"
+        {...props}
+      >
         {children}
-      </button>
+      </StyledButton>
     );
   }
 );

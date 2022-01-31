@@ -10,3 +10,7 @@ export default {
 const Template: Story = (args) => <Button {...args}>Click ME</Button>;
 
 export const Default = Template.bind({});
+
+Default.args = {
+  disabled: false,
+};
