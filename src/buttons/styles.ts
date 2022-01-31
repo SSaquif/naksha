@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { ButtonProps } from './Button';
+
 import {
   LIGHT_COLOR,
   LIGHT_TEXT_COLOR,
@@ -68,7 +69,7 @@ export const StyledButton = styled.button<ButtonProps>`
     return '1rem';
   }};
   line-height: 1.5;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   transition: all 0.15s ease-in-out;
 
   &:focus {

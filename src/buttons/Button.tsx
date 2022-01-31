@@ -9,6 +9,7 @@
  */
 import React from 'react';
 import { StyledButton } from './styles';
+import PropTypes from 'prop-types';
 
 export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   variant?: 'light' | 'dark' | 'danger';
@@ -32,6 +33,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   }
 );
+
+// For JS runtime check, TS already does a good job checking at buildtime
+Button.propTypes = {
+  variant: PropTypes.oneOf(['light', 'dark', 'danger']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  isFullWidth: PropTypes.bool,
+};
 
 Button.defaultProps = {
   variant: 'light',
