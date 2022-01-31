@@ -1,13 +1,13 @@
 {
   "homepage": "http://SSaquif.github.io/naksha",
   "name": "naksha",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A React Component Library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "predeploy": "npm run build-storybook",
+    "predeploy": "yarn build-storybook",
     "deploy": "gh-pages -d storybook-static",
     "build-storybook": "build-storybook",
     "format": "prettier --write .",
@@ -16,15 +16,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SSaquif/component-library.git"
+    "url": "git+https://github.com/SSaquif/naksha.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SSaquif/component-library/issues"
+    "url": "https://github.com/SSaquif/naksha/issues"
   },
-  "homepage": "https://github.com/SSaquif/component-library#readme",
   "peerDependencies": {
     "react": ">=16.12.0",
     "react-dom": ">=16.12.0"
