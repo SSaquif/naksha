@@ -6,6 +6,7 @@ import {
   DARK_TEXT_COLOR,
   DISABLED_OPACITY,
 } from '../utils/styles';
+import { TextareaProps } from './Textarea';
 
 export const StyledLabel = styled.label`
   font-weight: 500;
@@ -35,4 +36,11 @@ export const StyledInput = styled.input`
     background-color: ${DARK_COLOR};
     opacity: ${DISABLED_OPACITY};
   }
+`;
+
+// text area that inherits all it's styles from above StyledInput
+export const StyledTextarea = styled(StyledInput as 'textarea').attrs({
+  as: 'textarea',
+})<TextareaProps>`
+  resize: ${(p) => !p.isResizable && 'none'};
 `;
