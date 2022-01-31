@@ -9,15 +9,26 @@
  */
 import React from 'react';
 
-export const Button = React.forwardRef<
-  HTMLButtonElement,
-  React.ComponentPropsWithoutRef<'button'>
->(({ children, ...props }, ref) => {
-  return (
-    <button ref={ref} type="button" {...props}>
-      {children}
-    </button>
-  );
-});
+export interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
+  variant?: 'light' | 'dark' | 'danger';
+  size?: 'small' | 'medium' | 'large';
+  isFullWidth?: boolean;
+}
+
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ children, variant, size, isFullWidth, ...props }, ref) => {
+    return (
+      <button ref={ref} type="button" {...props}>
+        {children}
+      </button>
+    );
+  }
+);
+
+Button.defaultProps = {
+  variant: 'light',
+  size: 'medium',
+  isFullWidth: false,
+};
 
 Button.displayName = 'Button';
