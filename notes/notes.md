@@ -1,5 +1,7 @@
 # Notes
 
+Will move this folder to different Repo
+
 <!-- toc -->
 
 ## Resources
