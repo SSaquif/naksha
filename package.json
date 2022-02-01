@@ -20,9 +20,8 @@
     "format": "prettier --write \"src/**/*\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "predeploy": "yarn build-storybook",
-    "deploy": "gh-pages -d storybook-static",
-    "ci": "rm -rf node_modules && yarn install --frozen-lockfile"
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "repository": {
     "type": "git",
