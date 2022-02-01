@@ -4,6 +4,8 @@
 
 [`Storybook WebSite`](https://ssaquif.github.io/naksha/?path=/story/example-introduction--page)
 
+[`Github Repo`](https://github.com/SSaquif/naksha)
+
 🚧 Naksha is a `Work In Progress` 🚧
 
 Naksha is a `React Component Library` following [Atomic Design](https://bradfrost.com/blog/post/atomic-web-design/) Principles, created as a hobby project.
