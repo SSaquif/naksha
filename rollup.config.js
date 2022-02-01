@@ -17,7 +17,7 @@ export default [
       commonjs(),
       babel({
         babelHelpers: 'runtime',
-        exclude: '**/node_modules/**',
+        exclude: ['**/node_modules/**', '**/storybook-static/**'],
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       }),
     ],
