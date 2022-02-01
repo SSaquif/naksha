@@ -21,7 +21,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "predeploy": "yarn build-storybook",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static",
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile"
   },
   "repository": {
     "type": "git",
